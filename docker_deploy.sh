@@ -53,6 +53,6 @@ docker config create ${businessName} ~/.dev.yaml
 docker service create --name ${businessName} \
             --replicas 1 \
             --config source=${businessName},target=/home/.dev.yaml \
-            -v ./:/home
+            --mount type=bind,source=./,target=/home \
             -p 8888:8888 \
             $imgName
