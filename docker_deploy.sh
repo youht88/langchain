@@ -49,7 +49,7 @@ set -e
 # 运行容器
 echo "如果你想手动查找问题，可以试试以下命令来运行容器"
 echo "docker run -it --rm --name ${businessName} -v env:/home/env -p 8088:3000  $imgName /bin/sh "
-docker config create ${businessName} ~/.env/.dev.yaml
+docker config create ${businessName} ~/.dev.yaml
 docker service create --name ${businessName} \
             --replicas 1 \
             --config source=${businessName},target=/home/.dev.yaml \
