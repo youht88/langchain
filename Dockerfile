@@ -7,4 +7,5 @@ Run yes | apt update
 Run yes | apt install python3 python3-pip
 Run pip3 install jupyter
 Run pip3 install langchain openai
+Run pip3 install google-search-results
 Cmd ["jupyter","notebook","--ip=0.0.0.0","--port=8888","--allow-root"]
