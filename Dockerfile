@@ -5,8 +5,26 @@ Run ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 Workdir /home
 Run yes | apt update
 Run yes | apt install python3 python3-pip
+Run yes | apt install wget cmake gcc g++ 
+Run yes | apt install libxml2 libxslt1-dev
+#Run yes | apt install libmagic poppler tesseract   ?
+
 Run pip3 install jupyter
 Run pip3 install langchain openai
-Run pip3 install google-search-results 
-Run pip3 install pinecone-client pypdf pdfminer
-Cmd ["jupyter","notebook","--ip=0.0.0.0","--port=8888","--allow-root"]
+Run pip3 install google-search-results
+# models
+#Run pip3 install pygpt4all ?
+Run pip3 install huggingface_hub 
+Run pip3 install transformers
+# index document loaders 
+Run pip3 install pandas pypdf pdfminer 
+#Run pip3 install  unstructured ?
+Run pip3 install bilibili-api
+Run pip3 install beautifulsoup4
+# index.vectorstores
+#Run pip3 install chromadb ?
+Run pip3 install elasticsearch pinecone-client redis
+# agent.tools
+Run pip3 install gradio_tools wikipedia wolframalpha
+
+Cmd ["jupyter","notebook","--ip=0.0.0.0","--notebook-dir=/home","--port=8888","--allow-root"]
