@@ -10,7 +10,7 @@ Run yes | apt install libxml2 libxslt1-dev
 #Run yes | apt install libmagic poppler tesseract   ?
 
 Run pip3 install jupyter
-Run pip3 install langchain openai
+Run pip3 install langchain openai kor
 Run pip3 install google-search-results
 # models
 #Run pip3 install pygpt4all ?

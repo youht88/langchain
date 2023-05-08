@@ -1,2 +1,4 @@
 openai_api_key: <OPENAI_API_KEY>
 serpapi_api_key: <SERPAPI_API_KEY>
+pinecone_api_key: <PINECONE_API_KEY>
+pinecone_environment: <PINECONE_ENVIROMENT>
