@@ -43,16 +43,20 @@ set -e
 set +e # 下面这行失败是可以接受的
 #docker rm -f ${businessName}
 docker service rm ${businessName}
-docker config rm ${businessName}
+docker config rm ${businessName}_config
+docker network create -d overlay mynet
 set -e
 
 # 运行容器
 echo "如果你想手动查找问题，可以试试以下命令来运行容器"
 echo "docker run -it --rm --name ${businessName} -v env:/home/env -p 8088:3000  $imgName /bin/sh "
-docker config create ${businessName} ~/.dev.yaml
+docker config create ${businessName}_config ~/.dev.yaml
+
+#--mount type=bind,source=/home/linux1/,target=/home \
 docker service create --name ${businessName} \
             --replicas 1 \
-            --config source=${businessName},target=/home/.dev.yaml \
-            --mount type=bind,source=/home/linux1/,target=/home \
+            --config source=${businessName}_config,target=/home/langchain/.dev.yaml \
+            --network mynet \
+            --mount type=bind,source=/Users/youht/source/python,target=/home \
             -p 8888:8888 \
             $imgName
