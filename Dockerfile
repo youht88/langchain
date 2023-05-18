@@ -34,7 +34,7 @@ Run pip3 install tiktoken
 
 Run apt install sqlite3
 Run pip3 install tabulate
-Run pip3 install reids faiss-cpu
+Run pip3 install redis faiss-cpu
 Run pip3 install tqdm pickle
 
 Run apt install poppler-utils tesseract-ocr
