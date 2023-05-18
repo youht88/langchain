@@ -34,8 +34,8 @@ Run pip3 install tiktoken
 
 Run apt install sqlite3
 Run pip3 install tabulate
-Run pip3 install reids,faiss-cpu
-Run pip3 install tqdm,pickle
+Run pip3 install reids faiss-cpu
+Run pip3 install tqdm pickle
 
 Run apt install poppler-utils tesseract-ocr
 Cmd ["jupyter","notebook","--ip=0.0.0.0","--port=8888","--allow-root"]
