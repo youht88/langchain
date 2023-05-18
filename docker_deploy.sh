@@ -52,11 +52,12 @@ echo "如果你想手动查找问题，可以试试以下命令来运行容器"
 echo "docker run -it --rm --name ${businessName} -v env:/home/env -p 8088:3000  $imgName /bin/sh "
 docker config create ${businessName}_config ~/.dev.yaml
 
+source_dir = `pwd`
 #--mount type=bind,source=/home/linux1/,target=/home \
 docker service create --name ${businessName} \
             --replicas 1 \
             --config source=${businessName}_config,target=/home/langchain/.dev.yaml \
             --network mynet \
-            --mount type=bind,source=/Users/youht/source/python,target=/home \
+            --mount type=bind,source=${source_dir},target=/home \
             -p 8888:8888 \
             $imgName
