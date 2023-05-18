@@ -56,7 +56,7 @@ source_dir=`pwd`
 #--mount type=bind,source=/home/linux1/,target=/home \
 docker service create --name ${businessName} \
             --replicas 1 \
-            --config source=${businessName}_config,target=/home/langchain/.dev.yaml \
+            --config source=${businessName}_config,target=/home/.dev.yaml \
             --network mynet \
             --mount type=bind,source=${source_dir},target=/home \
             -p 8888:8888 \
