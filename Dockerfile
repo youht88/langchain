@@ -37,5 +37,6 @@ Run pip3 install tabulate
 Run pip3 install redis faiss-cpu
 Run pip3 install tqdm
 
-Run apt install poppler-utils tesseract-ocr
+Run yes | apt install poppler-utils tesseract-ocr
+
 Cmd ["jupyter","notebook","--ip=0.0.0.0","--port=8888","--allow-root"]
