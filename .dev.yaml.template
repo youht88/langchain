@@ -1,4 +1,7 @@
-openai_api_key: <OPENAI_API_KEY>
+openai_api_key: 
+    - <OPENAI_API_KEY1>
+    - <OPENAI_API_KEY2>
+    - <OPENAI_API_KEY3>
 serpapi_api_key: <SERPAPI_API_KEY>
 pinecone_api_key: <PINECONE_API_KEY>
 pinecone_environment: <PINECONE_ENVIROMENT>

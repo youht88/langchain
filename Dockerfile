@@ -33,6 +33,7 @@ Run pip3 install gradio_tools wikipedia wolframalpha
 Run pip3 install tiktoken
 
 Run apt install sqlite3
+Run apt install tabulate
 Run pip3 install reids,faiss-cpu
 Run pip3 install tqdm,pickle
 
