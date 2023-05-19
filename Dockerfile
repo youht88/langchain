@@ -39,4 +39,6 @@ Run pip3 install tqdm
 
 Run yes | apt install poppler-utils tesseract-ocr
 
+Run pip3 install gradio
+
 Cmd ["jupyter","notebook","--ip=0.0.0.0","--port=8888","--allow-root"]
