@@ -3,7 +3,7 @@ From ubuntu
 Env LANG en_US.UTF-8 LC_ALL=en_US.UTF-8
 Run ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 Workdir /home
-Run yes | apt update
+Run apt update --allow-releaseinfo-change
 Run yes | apt install python3 python3-pip
 Run yes | apt install wget cmake gcc g++ 
 Run yes | apt install libxml2 libxslt1-dev
